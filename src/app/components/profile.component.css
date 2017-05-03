@@ -1,0 +1,77 @@
+.avatar{
+    background-size:  cover;
+}
+
+.card-img{
+    width: 250px;
+    
+}
+
+.info {    
+    margin-left: 2px;
+    margin-bottom: 15px; 
+    padding: 3px 0px 3px 0px;
+    text-align: center;    
+    border: 1px solid;
+    border-radius: 3px;
+    float: left;
+    
+}
+
+.info-25{
+    width: 24%;
+    
+}
+
+.info-50{
+    width: 48%;   
+
+}
+.info-sm{
+   font-size: 15px;
+}
+
+.green {
+    color: #03C03C;
+}
+
+.orange{
+    color: #FFB347;
+}
+
+.blue{
+    color: #779EBB;
+}
+
+.purple{
+    color: #B39EB5;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+.repos{
+    border-bottom: 1px solid #CFCFC4;
+}
+.repo-info{
+    width: 60%;
+    float: left;
+}
+
+.repo-stats{
+    padding-top: 25px;
+    width: 40%;
+    float: left;
+}
+
+.form {        
+    margin: 8px;
+    
+}
+
+.form-item{
+    width: 100%;
+}
+

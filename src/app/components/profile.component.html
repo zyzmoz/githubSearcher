@@ -1,0 +1,46 @@
+<div class="form">
+  <md-input-container class="form-item">
+    <input  mdInput placeholder="Enter GitHub username" [(ngModel)]="username" name="username" (keyup)="searchUser()" >
+
+  </md-input-container>
+</div>
+
+<md-card *ngIf="user">
+  <md-card-header>
+    <img md-card-avatar src="{{user.avatar_url}}">      
+   
+    <md-card-title>{{user.name}}</md-card-title>
+    <md-card-subtitle>{{user.login}}</md-card-subtitle>
+  </md-card-header>
+  <!--<img md-card-image class="card-img" src="{{user.avatar_url}}">-->
+  <md-card-content>
+    <p>
+      {{user.bio?user.bio: user.blog}}
+    </p>
+    <div>
+      <span class="info info-25 green">{{user.public_repos}} Public Repos</span>
+      <span class="info info-25 orange">{{user.public_gists}} Gists</span>
+      <span class="info info-25 blue">{{user.followers}} Followers</span>
+      <span class="info info-25 purple">{{user.following}} Following</span>
+    </div>
+
+  </md-card-content>
+  <md-card-actions>
+    <a md-raised-button color="primary" href="{{user.html_url}}" target="_blank">View on GitHub</a>    
+  </md-card-actions>
+</md-card>
+
+
+<div class="wrapper">
+  <div *ngFor="let repo of repos" class="repos grouping">
+    <div class="repo-info">
+      <h3><a target="_blank" href="{{repo.html_url}}">{{repo.name}}</a></h3>
+      <p>{{repo.description}}</p>
+    </div>
+    <div class="repo-stats">
+      <span class="info info-50 blue">{{repo.watchers}} Watchers</span>
+      <span class="info info-50 purple">{{repo.forks}} Forks</span>      
+    </div>
+
+  </div>
+</div>
